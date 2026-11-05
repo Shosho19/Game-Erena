@@ -1,0 +1,949 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Days+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #cbfe1c;
+  --black-color: #000;
+  --white-color: #fff;
+}
+::selection {
+  background-color: var(--primary-color);
+  color: var(--black-color);
+}
+
+body {
+  font-family: "Chakra Petch", sans-serif;
+}
+
+/* start navbar */
+
+.navbar {
+  background-color: #0b0e13;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  border: 3px solid #171a21;
+}
+
+.navbar-brand,
+.navbar-brand:hover {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.navbar-brand i {
+  padding-right: 30px;
+}
+
+.nav-link {
+  color: var(--white-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0px 8px;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: var(--primary-color);
+}
+
+.nav-icons i {
+  color: var(--white-color);
+  font-size: 1.1rem;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.nav-icons i:hover {
+  color: var(--primary-color);
+}
+
+.nav-icons .btn {
+  padding: 8px 25px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.animation-btn {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  background: var(--primary-color);
+  color: var(--black-color);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.animation-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 30px;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.189),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+  transition: 0.5s;
+}
+
+.animation-btn:hover::before {
+  left: 120%;
+}
+
+.animation-btn:hover {
+  background-color: rgba(201, 254, 28, 0.441);
+}
+
+/* end navbar */
+
+/* start home section */
+#home {
+  min-height: 100vh;
+  width: 100%;
+  background-image:linear-gradient(#000000e0, #000000e0), url("../images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#home .home-content h1 {
+  color: var(--white-color);
+  font-family: "Days One", sans-serif;
+  font-size: 4.3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+#home .home-content span {
+  color: var(--primary-color);
+}
+
+#home .home-content p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #d1d5dc;
+}
+
+.home-buttons .btn:nth-child(1) {
+  padding: 20px 30px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+.animation-outline-btn {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--primary-color);
+  padding: 20px 30px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.animation-outline-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 30px;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+  transition: 1s;
+}
+
+.animation-outline-btn:hover::before {
+  left: 120%;
+}
+
+.animation-outline-btn:hover {
+  background-color: var(--primary-color);
+}
+
+.home-image {
+  position: relative;
+  width: 650px;
+  z-index: 10;
+  height: 450px;
+}
+
+.home-image img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 4px solid var(--primary-color);
+  border-radius: 15px;
+}
+
+.home-image .img-box {
+  position: absolute;
+  background: #0b0e13;
+  border: 2px solid #364153;
+  border-radius: 7px;
+  bottom: -25px;
+  padding: 20px 30px;
+  left: -20px;
+}
+
+.home-image i {
+  color: var(--primary-color);
+  padding-right: 35px;
+  font-size: 20px;
+}
+
+.home-image .box-text span {
+  font-size: 12px;
+  color: #99a1af;
+}
+
+.home-image .box-text h4 {
+  font-size: 25px;
+  color: #f1f1f1;
+  font-weight: 700;
+}
+
+/* end home section */
+
+/* start about section */
+
+#games {
+  width: 100%;
+  min-height: 100vh;
+  background: #0b0e13;
+}
+
+.about-title {
+  margin-top: 70px;
+  width: 100%;
+}
+
+.about-title h3 {
+  color: #adff2f;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 5px;
+  margin: 0 15px;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+/* الeffect ده بحثت عليه كتير بجد علشان اعرفه بس الحمدلله عملته */
+.about-title::before,
+.about-title::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(to right, #cbfe1c, transparent);
+}
+
+.about-title::before {
+  background: linear-gradient(to left, #cbfe1c 40%, rgba(173, 255, 47, 0.2));
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+.about-title::after {
+  background: linear-gradient(to right, #cbfe1c 40%, rgba(173, 255, 47, 0.2));
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.games-titles h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #f1f1f1;
+  font-family: "Days One", sans-serif;
+}
+
+.custom-carousel-btn {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid #364153;
+  transition: 0.5s;
+}
+
+.custom-carousel-btn i {
+  color: #364153;
+  font-size: 20px;
+  transition: 0.5s;
+}
+
+.custom-carousel-btn:hover {
+  border-color: var(--primary-color);
+}
+
+.custom-carousel-btn:hover i {
+  color: var(--primary-color);
+}
+
+.games-card {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #121214;
+  transition: 0.4s ease;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(141, 236, 62, 0.45),
+    transparent,
+    rgba(141, 236, 62, 0.75)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.games-card:hover {
+  border: 2px solid var(--primary-color);
+}
+
+.games-card .card-bg {
+  transition: 0.5s;
+}
+
+.games-card:hover .card-bg {
+  transform: scale(1.1);
+}
+
+.games-card:hover .badges-container {
+  transform: translateY(0);
+}
+
+.games-card:hover .card-title {
+  transform: translateY(0);
+}
+
+.games-card:hover .card-overlay {
+  opacity: 1;
+}
+
+.badges-container {
+  display: flex;
+  gap: 8px;
+  transform: translateY(-40px);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.badge {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  font-family: sans-serif;
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-title {
+  color: #000;
+  font-size: 18px;
+  font-weight: 800;
+  font-family: sans-serif;
+  margin: 0;
+  transform: translateY(40px);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* end about section */
+
+/* Start Services Section   */
+#services {
+  width: 100%;
+  min-height: 100vh;
+  background: #0b0e13;
+}
+
+.services-title {
+  margin-top: 70px;
+  width: 100%;
+}
+
+.services-title h3 {
+  color: #adff2f;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 5px;
+  margin: 0 15px;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+/* الeffect ده بحثت عليه كتير بجد علشان اعرفه بس الحمدلله عملته */
+.services-title::before,
+.services-title::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(to right, #cbfe1c, transparent);
+}
+
+.services-title::before {
+  background: linear-gradient(to left, #cbfe1c 40%, rgba(173, 255, 47, 0.2));
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+.services-title::after {
+  background: linear-gradient(to right, #cbfe1c 40%, rgba(173, 255, 47, 0.2));
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.services-titles h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #f1f1f1;
+  font-family: "Days One", sans-serif;
+}
+
+.services-titles h3 span {
+  margin: 0 8px;
+  color: var(--primary-color);
+}
+
+.services-titles h3:nth-child(3) {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+}
+
+.game-card {
+  height: 300px;
+  background: #16181c;
+  border: 1px solid #26303b;
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.game-card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.icon-box {
+  width: 72px;
+  height: 72px;
+  background: #202b40;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #b6ff00;
+  font-size: 30px;
+  transition: 0.5s;
+}
+
+.game-card h3 {
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 25px;
+  font-size: 20px;
+  font-family: "Days One", sans-serif;
+}
+
+/* End Services Section   */
+
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap");
+
+.logo-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 420px;
+  background: #080c12;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logo-glow {
+  position: absolute;
+  width: 1000px;
+  height: 300px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(157, 255, 0, 0.45),
+    rgba(157, 255, 0, 0.15),
+    transparent 70%
+  );
+
+  filter: blur(40px);
+}
+
+.logo-track {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  position: relative;
+
+  z-index: 2;
+}
+
+.logo-card {
+  width: 110px;
+
+  height: 108px;
+
+  background: #101923;
+
+  border-radius: 14px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  flex-shrink: 0;
+
+  transition: 0.3s;
+}
+
+.logo-card img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.track-one {
+  animation: moveRight 25s linear infinite;
+}
+
+.track-two {
+  animation: moveLeft 25s linear infinite;
+}
+
+@keyframes moveRight {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes moveLeft {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-card {
+    width: 85px;
+    height: 85px;
+  }
+
+  .logo-section {
+    min-height: 300px;
+  }
+}
+
+.team-section {
+  width: 100%;
+  min-height: 100vh;
+  background: #0b0e13;
+}
+
+.team-section h3:nth-child(3) {
+  color: #99a1af;
+  font-size: 1.1rem;
+  font-weight: 400;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.team-card {
+  height: 350px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: #111;
+
+  cursor: pointer;
+}
+
+.team-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) brightness(0.7);
+  transition: 0.5s ease;
+}
+
+.team-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+
+  z-index: 1;
+}
+
+.team-text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 25px;
+  z-index: 3;
+}
+
+.team-text h3 {
+  color: white;
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.team-text p {
+  color: #ddd;
+  margin: 0;
+  font-size: 14px;
+}
+
+.team-text span {
+  color: #aaa;
+  font-size: 13px;
+}
+
+.team-card:hover img {
+  filter: grayscale(0) brightness(0.8);
+}
+.team-name {
+  position: absolute;
+  right: 0px;
+  bottom: 50px;
+  z-index: 4;
+  color: #6c6c6c;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 2px;
+  transform: rotate(90deg);
+  transition: 0.5s;
+}
+.team-tag {
+  transition: 0.5s;
+}
+
+.team-card:hover .team-tag,
+.team-card:hover .team-name {
+  color: var(--primary-color);
+}
+
+#contact {
+  width: 100%;
+  min-height: 100vh;
+  background: #0e131e;
+}
+
+.info-card {
+  background: #1e2939;
+  padding: 50px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+.info-card h5 {
+  font-size: 25px;
+  font-weight: 700;
+  color: #f1f1f1;
+  font-family: "Days One", sans-serif;
+}
+
+#contact .services-titles p {
+  color: #99a1af;
+  font-size: 20px;
+  font-weight: 400;
+}
+.info-card p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #99a1af;
+}
+
+.icon {
+  width: 75px;
+  height: 75px;
+  background: #b6ff2e;
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
+.community {
+  background: linear-gradient(135deg, #b6ff2e, #2ee59d);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.community h4 {
+  font-size: 25px;
+  font-weight: 700;
+  color: #0b0e13;
+  font-family: "Days One", sans-serif;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.socials div {
+  width: 45px;
+  height: 45px;
+  background: #111;
+  color: #b6ff2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.form-card {
+  background: #1e2939;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.form-card h4 {
+  color: #f1f1f1;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Days One", sans-serif;
+}
+
+.custom-input {
+  background: #364153;
+  border: 1px solid #4a5565;
+  color: #f1f1f1;
+  padding: 15px 20px;
+}
+
+.custom-input::placeholder {
+  font-size: 16px;
+  color: #f1f1f1;
+}
+
+.form-card label {
+  color: #f1f1f1;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
+.custom-input:focus {
+  border-color: #b6ff2e;
+  box-shadow: none;
+  background-color: #364153;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.form-check .form-check-label {
+  font-size: 16px;
+  font-weight: 400;
+  color: #99a1af;
+  padding-left: 10px;
+}
+
+.form-check-input {
+  padding: 10px;
+}
+
+.btn-neon {
+  background: #b6ff2e;
+  color: #000;
+  font-weight: bold;
+  padding: 20px 0;
+  font-size: 18px;
+  color: #0b0e13;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #2a3447;
+  text-align: center;
+}
+
+.stats h5 {
+  color: var(--primary-color);
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.stats p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #99a1af;
+}
+
+.custom-footer {
+  background-color: #000000;
+  color: #8a8a8a;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+
+.footer-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #8a8a8a;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  max-width: 280px;
+}
+
+.social-links a {
+  color: #8a8a8a;
+  font-size: 1.2rem;
+  margin-right: 1.2rem;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: var(--primary-color);
+}
+
+.footer-heading {
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1.8rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.9rem;
+}
+
+.footer-links a {
+  color: #8a8a8a;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-links a:hover {
+  color: var(--primary-color);
+}
+
+.footer-divider {
+  border-top: 1px solid #111111;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: #666666;
+}
+
+.bottom-links a {
+  color: #8a8a8a;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-left: 1.5rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.bottom-links a:hover {
+  color: var(--primary-color);
+}
+
+.bottom-links a.active-link {
+  color: var(--primary-color);
+}
